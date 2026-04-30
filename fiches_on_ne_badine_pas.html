@@ -1,0 +1,198 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; padding: 1rem 0 1.5rem; }
+.tab { padding: 8px 16px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); font-size: 14px; cursor: pointer; background: var(--color-background-primary); color: var(--color-text-secondary); transition: all 0.15s; }
+.tab.active { background: #E1F5EE; color: #085041; border-color: #5DCAA5; font-weight: 500; }
+.section { display: none; }
+.section.active { display: block; }
+.card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 12px; }
+.card-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+.item { font-size: 14px; color: var(--color-text-primary); line-height: 1.6; padding: 6px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.item:last-child { border-bottom: none; }
+.item strong { font-weight: 500; color: #0F6E56; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: var(--border-radius-md); margin-right: 4px; margin-bottom: 4px; }
+.t-teal { background: #E1F5EE; color: #085041; }
+.t-purple { background: #EEEDFE; color: #3C3489; }
+.t-coral { background: #FAECE7; color: #993C1D; }
+.t-amber { background: #FAEEDA; color: #633806; }
+.t-blue { background: #E6F1FB; color: #0C447C; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 500px) { .grid2 { grid-template-columns: 1fr; } }
+.acte { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); margin-bottom: 12px; overflow: hidden; }
+.acte-header { padding: 10px 1.25rem; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 10px; }
+.acte-body { padding: 0 1.25rem 12px; }
+.acte-1 .acte-header { background: #E1F5EE; color: #085041; }
+.acte-2 .acte-header { background: #FAEEDA; color: #633806; }
+.acte-3 .acte-header { background: #FAECE7; color: #993C1D; }
+.badge { font-size: 11px; padding: 2px 8px; border-radius: 99px; }
+.badge-teal { background: #9FE1CB; color: #04342C; }
+.badge-amber { background: #FAC775; color: #412402; }
+.badge-coral { background: #F5C4B3; color: #4A1B0C; }
+.influence { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 14px; }
+.influence:last-child { border-bottom: none; }
+.inf-name { font-weight: 500; color: #0F6E56; min-width: 120px; flex-shrink: 0; }
+.inf-desc { color: var(--color-text-primary); line-height: 1.5; }
+</style>
+
+<h2 class="sr-only">Fiches de révision — On ne badine pas avec l'amour</h2>
+
+<div class="tabs">
+  <button class="tab active" onclick="show('genre')">Genre de l'œuvre</button>
+  <button class="tab" onclick="show('structure')">Structure</button>
+  <button class="tab" onclick="show('actes')">Les 3 actes</button>
+  <button class="tab" onclick="show('perso')">Personnages</button>
+</div>
+
+<div id="genre" class="section active">
+  <div class="card">
+    <div class="card-title">Une comédie-proverbe ?</div>
+    <div class="item">Genre mondain du XVIIe–XVIIIe siècle popularisé par <strong>Carmontelle</strong></div>
+    <div class="item">Illustre un adage : <strong>« On ne badine pas avec l'amour »</strong></div>
+    <div class="item">Caractéristiques reprises : projet de mariage, considérations pécuniaires, rebondissements, triangle amoureux, lettre interceptée</div>
+    <div class="item">Musset revisite ce genre mineur avec brio</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Un drame romantique ?</div>
+    <div class="item"><strong>Points communs :</strong> mélange des genres (comique + tragique), fin tragique, complexité psychologique, 3 actes avec de nombreux tableaux</div>
+    <div class="item"><strong>Influences :</strong> Shakespeare, Stendhal, Hugo</div>
+    <div class="item"><strong>Thème central :</strong> déchirure entre aspirations individuelles et désenchantement du monde</div>
+    <div class="item"><strong>Ce qui manque :</strong> pas d'arrière-plan historique, pas de couleur locale, pas d'accessoires dramatiques (poignard, poison…), style plus épuré et intime</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Une œuvre inclassable — les influences</div>
+    <div class="influence"><span class="inf-name">Shakespeare</span><span class="inf-desc">Fantaisie, mélange des tons</span></div>
+    <div class="influence"><span class="inf-name">Marivaux</span><span class="inf-desc">Retournements galants, jeu amoureux</span></div>
+    <div class="influence"><span class="inf-name">Les Liaisons dangereuses</span><span class="inf-desc">Roman libertin, cruauté dans l'amour</span></div>
+    <div class="influence"><span class="inf-name">Rousseau (La Nouvelle Héloïse)</span><span class="inf-desc">Analyse des sentiments, idéalisme</span></div>
+    <div class="influence"><span class="inf-name">Balzac</span><span class="inf-desc">Réalisme comique, personnages ridicules</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Conclusion : une œuvre hybride</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 6px; padding: 4px 0 8px;">
+      <span class="tag t-teal">Idéalisme galant</span>
+      <span class="tag t-coral">Cruauté libertine</span>
+      <span class="tag t-amber">Prosaïsme bourgeois</span>
+    </div>
+    <div class="item">Écrite avant et pendant la crise avec <strong>George Sand</strong> (les amants de Venise)</div>
+    <div class="item">Transpose la jalousie, l'humiliation et la passion déçue</div>
+    <div class="item">Offre une anatomie lucide et désenchantée du cœur humain</div>
+  </div>
+</div>
+
+<div id="structure" class="section">
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">Organisation générale</div>
+      <div class="item"><strong>3 actes</strong> au total</div>
+      <div class="item"><strong>Acte I :</strong> 5 scènes</div>
+      <div class="item"><strong>Acte II :</strong> 5 scènes</div>
+      <div class="item"><strong>Acte III :</strong> 8 scènes (le plus riche en rebondissements)</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Procédés de composition</div>
+      <div class="item">Effets de contraste entre les scènes</div>
+      <div class="item">Échos et symétries entre les personnages</div>
+      <div class="item">Rôle du <strong>chœur des paysans</strong> : commentaire familier et rustique de l'action</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Évolution du ton — arc dramatique</div>
+    <div style="display: flex; align-items: center; gap: 0; margin: 8px 0; border-radius: var(--border-radius-md); overflow: hidden; font-size: 13px; font-weight: 500;">
+      <div style="flex:1; background:#E1F5EE; color:#085041; padding: 10px; text-align:center;">Acte I<br><span style="font-weight:400; font-size:12px;">Comédie légère</span></div>
+      <div style="flex:1; background:#FAEEDA; color:#633806; padding: 10px; text-align:center;">Acte II<br><span style="font-weight:400; font-size:12px;">Tension croissante</span></div>
+      <div style="flex:1; background:#FAECE7; color:#993C1D; padding: 10px; text-align:center;">Acte III<br><span style="font-weight:400; font-size:12px;">Drame et tragique</span></div>
+    </div>
+    <div class="item" style="margin-top: 8px;">Opposition principale : <strong>fantoches ridicules</strong> (Blazius, Dame Pluche) vs <strong>jeunes premiers libres</strong> (Perdican, Camille)</div>
+  </div>
+</div>
+
+<div id="actes" class="section">
+  <div class="acte acte-1">
+    <div class="acte-header">
+      <span>Acte I</span>
+      <span class="badge badge-teal">5 scènes</span>
+      <span style="font-weight: 400; font-size: 13px;">Les retrouvailles de deux enfants du pays</span>
+    </div>
+    <div class="acte-body">
+      <div class="item"><strong>Blazius</strong> (gros précepteur ivrogne de Perdican) et <strong>Dame Pluche</strong> (maigre gouvernante de Camille) : personnages ridicules présentés</div>
+      <div class="item">Retrouvailles froides : <strong>Camille</strong> (18 ans, sortant du couvent, distante) et <strong>Perdican</strong> (21 ans, frais docteur)</div>
+      <div class="item">Le Baron souhaite leur mariage</div>
+      <div class="item">Introduction de <strong>Rosette</strong>, jeune paysanne, sœur de lait de Camille, restée simple et attachée au monde de l'enfance</div>
+      <div class="item">Le Baron, déjà désespéré par le comportement de son fils et de sa nièce</div>
+    </div>
+  </div>
+
+  <div class="acte acte-2">
+    <div class="acte-header">
+      <span>Acte II</span>
+      <span class="badge badge-amber">5 scènes</span>
+      <span style="font-weight: 400; font-size: 13px;">L'annonce du départ de Camille</span>
+    </div>
+    <div class="acte-body">
+      <div class="item">Camille annonce son intention de repartir (probablement retourner au couvent)</div>
+      <div class="item">Perdican commence à courtiser <strong>Rosette</strong></div>
+      <div class="item">Conversations tendues entre Camille et Perdican : <strong>amour divin vs amour humain</strong></div>
+      <div class="item">Camille <strong>piège</strong> Perdican : lui fait avouer son amour pour elle devant Rosette cachée</div>
+      <div class="item">Perdican, par <strong>orgueil</strong>, déclare qu'il épousera Rosette</div>
+    </div>
+  </div>
+
+  <div class="acte acte-3">
+    <div class="acte-header">
+      <span>Acte III</span>
+      <span class="badge badge-coral">8 scènes</span>
+      <span style="font-weight: 400; font-size: 13px;">L'orgueil et la mort tragique de Rosette</span>
+    </div>
+    <div class="acte-body">
+      <div class="item">Échange de lettres et quiproquos</div>
+      <div class="item">Perdican et Camille s'avouent mutuellement leur amour</div>
+      <div class="item"><strong>Rosette</strong>, cachée derrière l'autel de l'oratoire, tombe morte de chagrin</div>
+      <div class="item">Camille dit adieu à Perdican</div>
+    </div>
+  </div>
+</div>
+
+<div id="perso" class="section">
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">Personnages principaux</div>
+      <div class="item"><strong>Perdican</strong> — 21 ans, docteur, impulsif, orgueilleux</div>
+      <div class="item"><strong>Camille</strong> — 18 ans, sortant du couvent, distante, orgueilleuse</div>
+      <div class="item"><strong>Rosette</strong> — sœur de lait de Camille, paysanne simple et sincère, victime innocente</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Personnages secondaires (fantoches)</div>
+      <div class="item"><strong>Le Baron</strong> — père / oncle, veut le mariage, désespéré par les deux jeunes</div>
+      <div class="item"><strong>Blazius</strong> — gros précepteur ivrogne de Perdican, comique de caractère</div>
+      <div class="item"><strong>Dame Pluche</strong> — gouvernante maigre et rigide de Camille, comique de caractère</div>
+      <div class="item"><strong>Le chœur des paysans</strong> — commentaire distancié et rustique de l'action</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Dynamiques et oppositions entre personnages</div>
+    <div class="item"><strong>Perdican / Camille :</strong> même orgueil, même intelligence — se blessent mutuellement par amour-propre</div>
+    <div class="item"><strong>Camille / Rosette :</strong> sœurs de lait opposées — l'une cloîtrée et froide, l'autre simple et sincère</div>
+    <div class="item"><strong>Fantoches / jeunes premiers :</strong> comique des uns vs profondeur tragique des autres</div>
+    <div class="item"><strong>Rosette :</strong> victime innocente des jeux d'orgueil de Camille et Perdican — sa mort est le prix du badinage</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Thème central</div>
+    <div style="padding: 8px 0; font-size: 14px; color: var(--color-text-primary); line-height: 1.7;">L'<strong>orgueil</strong> comme moteur tragique : ni Camille ni Perdican ne veut céder en premier. Leur jeu de pouvoir amoureux détruit Rosette, innocente et sincère. La pièce montre que <strong>« badiner » avec l'amour a un coût réel</strong>.</div>
+  </div>
+</div>
+
+<script>
+function show(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
