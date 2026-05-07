@@ -312,7 +312,7 @@ footer { text-align: center; font-family: 'Helvetica Neue', Arial, sans-serif; f
       Certaines analyses peuvent manquer de nuances, certains contenus peuvent ne pas être à jour ou ne pas correspondre exactement au programme de ton établissement.
     </p>
     <p style="font-size:13.5px; color:#3a3830; line-height:1.7; margin-bottom:1.5rem;">
-      <strong>Ne te fie pas à ce site à 100%.</strong> Consulte toujours tes cours, ton professeur et des sources officielles pour compléter ou vérifier les informations.
+      <strong>Ne te fie pas à ce site à 100%.</strong> Consulte toujours tes cours, ton professeur et des sources officielles pour compléter ou vérifier les informations. <strong>Les textes de Musset ne correspondent pas exactement à ceux des cours</strong>
     </p>
 
     <label style="
@@ -2267,6 +2267,7 @@ footer { text-align: center; font-family: 'Helvetica Neue', Arial, sans-serif; f
       <div class="card-header">
         <div class="fiche-numero">Acte II, scène 5 · Extrait · Tirade de Perdican</div>
         <div class="fiche-titre">On ne badine pas avec l'amour — Acte II, scène 5</div>
+         <div class="fiche-titre">DIFFÉRENT DU COURS</div>
         <div class="fiche-sous">De « Vous me faites peur… » à la fin de la scène · Analyse linéaire</div>
         <div class="tags">
           <span class="tag tag-coral">Tirade emportée</span>
@@ -3099,7 +3100,7 @@ footer { text-align: center; font-family: 'Helvetica Neue', Arial, sans-serif; f
 
 
 <footer>
-  Fiches basées sur les analyses de commentairecompose.fr — Elouan Dieumegard
+  Fiches basées sur les analyses de commentairecompose.fr — Arthur Rimbaud, <em>Cahiers de Douai</em> (1870)
 </footer>
 
 <script>
