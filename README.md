@@ -3099,7 +3099,7 @@ footer { text-align: center; font-family: 'Helvetica Neue', Arial, sans-serif; f
 
 
 <footer>
-  Fiches basées sur les analyses de commentairecompose.fr — Arthur Rimbaud, <em>Cahiers de Douai</em> (1870)
+  Fiches basées sur les analyses de commentairecompose.fr — Elouan Dieumegard
 </footer>
 
 <script>
